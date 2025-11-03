@@ -36,7 +36,26 @@ Interactive map showing gross profit by country and product.
 ## Actions to Be Taken
 
 Optimize Discounts: Current discount impact is 7.20%, suggesting room for margin improvement.
+
 Focus on High-Performing Segments: Government and Small-business segments drive the majority of sales—strategic investment recommended.
+
 Focus on Low-Performing Segments: Enterprise segments drive significant portion of sales however see least profit acroos all countries, stategic investment recommended.
+
 Product Strategy: Paseo and VTT dominate unit sales; explore bundling or premium pricing.
+
 Cost Control: Products like Velo have higher manufacturing costs—evaluate sourcing and production efficiency.
+
+## Why This Matters
+This dashboard transforms raw transactional data into actionable insights, enabling:
+
+Faster decision-making.
+
+Clear visibility into growth drivers.
+
+Strategic planning for profitability and market expansion
+
+🚀 Tech Stack: Power BI | DAX | Data Modeling | Time Intelligence
+
+📂 Data Source: Sales transactions (2013–2014)
+
+🎯 Goal: Deliver a data-driven narrative for business leaders.
