@@ -10,6 +10,7 @@ Growth Measurement: MoM growth appeared inflated due to partial historical data,
 
 ## Insights & Solutions Presented
 The dashboard consolidates raw data into interactive visuals that answer critical business questions:
+
 ✅ Revenue & Growth Trends
 
 Total Sales: $118.73M
