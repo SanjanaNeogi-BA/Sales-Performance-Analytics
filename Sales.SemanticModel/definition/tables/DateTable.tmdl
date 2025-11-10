@@ -1,0 +1,66 @@
+table DateTable
+	lineageTag: e5f40f3c-5171-4501-9e39-dc24d8f8f360
+
+	column Date
+		formatString: Long Date
+		lineageTag: 754a40c7-a356-4a93-8d07-bb611d15cea1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 5a6705d3-4156-46ab-9d8d-f09352548664
+			defaultHierarchy: LocalDateTable_47bba2dc-48cb-4269-9913-25e8f672b94c.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year
+		formatString: 0
+		lineageTag: d6836482-a210-4a54-8df7-026ff4f99a51
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: acb26467-6f79-4283-b26b-75af2f213ff3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumber
+		formatString: 0
+		lineageTag: 010dfce1-9898-4506-8a90-da77cb37afab
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [MonthNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: 382422f2-0482-4789-8a1b-fb3403be688a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DateTable = calculated
+		mode: import
+		source = ```
+				ADDCOLUMNS(
+				    CALENDAR(DATE(2010,1,1),DATE(2030,12,31)),
+				    
+				 "Year", YEAR([Date]),
+				    "Month", FORMAT([Date], "MMMM"),
+				    "MonthNumber", MONTH([Date]),
+				    "Quarter", "Q" & FORMAT([Date], "Q")
+				)
+				```
+
+	annotation PBI_Id = 075f453fc1e94fcb8e1643459be02415
+
